@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1f7ee;
+}
+
+#blur.active {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============ Navigation Base =============*/
+.main-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.link-logo {
+  display: inline-block;
+  height: 40px;
+}
+
+nav {
+  border-bottom-style: solid;
+  position: sticky;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+header.nav-container {
+  display: flex;
+  min-height: 7vh;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+}
+
+.logo {
+  flex: 0.5;
+}
+
+.navigation {
+  flex: 2.5;
+}
+
+.nav-links-extra {
+  flex: 0.5;
+}
+
+.heading1 {
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-family: "Sharpie", sans-serif;
+}
+
+.nav-links,
+.nav-links-extra {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-links > li {
+  font-family: "Chillax", sans-serif;
+  position: relative;
+}
+
+.navigation a::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background: #444;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+.navigation a:hover::before {
+  width: 100%;
+}
+
+.nav-links-extra {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links-extra > li {
+  margin-left: 50px;
+  font-family: "Tanker", sans-serif;
+}
+
+/*================== Footer Base =================*/
+
+/*==================== About ==================*/
+.about-section {
+  margin: 5% auto;
+  width: 70%;
+}
+
+.h-about {
+  font-family: "Chillax", sans-serif;
+  margin-bottom: 4%;
+  font-size: 3rem;
+}
+
+.p-text {
+  line-height: 35px;
+  text-align: justify;
+  margin-bottom: 50px;
+  font-family: "General Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+  font-family: "General Sans", sans-serif;
+  font-size: 1.1rem;
+}
+
+em {
+  text-decoration: underline;
+  color: red;
+}
+
+.copyright {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgb(37, 71, 37);
+  font-family: "Sharpie", sans-serif;
+}
+
+/*================== Contact Us ===================*/
+#modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  background: #f1f7ee;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  border-width: 1px;
+  border-color: rgba(84, 79, 79, 0.4);
+  border-style: solid;
+  border-radius: 8px;
+}
+
+#modal.active {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+form {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(84, 79, 79, 0.8);
+  border-radius: 8px;
+  outline: none;
+  font-size: 1.1em;
+  font-family: "Chillax", sans-serif;
+  margin-bottom: 0.5em;
+}
+
+form label {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  font-family: "Chillax", sans-serif;
+  text-transform: uppercase;
+}
+
+input:valid ~ label,
+input:focus ~ label {
+  color: #00dfc4;
+}
+
+textarea {
+  resize: none;
+}
+
+/*================ Pricing =================*/
+.section-pricing {
+  margin: 3% auto;
+  width: 70%;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+a[class="payment"] {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(31, 30, 30, 0.8);
+  font-weight: bolder;
+  transition: 250ms;
+  color: rgb(154, 154, 87);
+}
+
+a[class="payment"]:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+  width: 25rem;
+  border-radius: 8px;
+  background: white;
+  text-align: center;
+}
+
+.card:nth-child(1) {
+  box-shadow: 1px 1px 10px rgba(86, 205, 86, 0.2);
+}
+
+.card:nth-child(2) {
+  box-shadow: 1px 1px 10px rgba(242, 242, 70, 0.2);
+}
+
+.card:nth-child(3) {
+  box-shadow: 1px 1px 10px rgba(44, 44, 44, 0.2);
+}
+
+.h-pricing,
+.p-first {
+  font-family: "Chillax", sans-serif;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.h-pricing {
+  font-size: 1.5rem;
+}
+
+.p-first {
+  color: rgb(111, 111, 111);
+}
+
+.subscribe {
+  display: inline-block;
+  color: black;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  border-color: rgba(51, 109, 51, 0.2);
+  border-width: 2px;
+  background: rgba(51, 109, 51, 0.2);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Chillax", sans-serif;
+  margin: 1rem 0;
+  transition: all 0.5s;
+}
+
+.subscribe:hover {
+  background: black;
+  color: white;
+  border-color: transparent;
+}
+
+.card ul {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.card li {
+  display: inline-block;
+  width: 90%;
+  padding: 1em 0;
+  font-family: "Chillax", sans-serif;
+}
+
+.card li:not(li:last-child) {
+  border-bottom-style: solid;
+  border-bottom-width: thin;
+  border-bottom-color: rgba(84, 79, 79, 0.1);
+}
+
+.cedi {
+  font-family: "Chillax", sans-serif;
+}
+
+.info {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 11px;
+  margin-left: 1%;
+  vertical-align: text-top;
+}
+
+.info[data-title]::before {
+  content: attr(data-title);
+  background: black;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 2.5px;
+  font-family: "Chillax", sans-serif;
+  position: absolute;
+  padding: 2px 5px 2px 5px;
+  bottom: 1.1em;
+  left: -150%;
+  white-space: wrap;
+  box-shadow: 1px 1px 4px #242424;
+  opacity: 0;
+  border: 1px solid #1b1b1b;
+  z-index: 99999999;
+  visibility: hidden;
+}
+
+.info[data-title]:hover::before {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.1s ease-in 0.2s;
+}
+
+/*===================== What's New? ================*/
+.whatsnew {
+  margin: 5% auto 10%;
+  width: 50%;
+}
+.update-card {
+  border-style: solid;
+  border-width: 0.15em;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px #242424;
+  padding: 5%;
+  margin-bottom: 1em;
+}
+
+.update-h {
+  font-family: "Chillax", sans-serif;
+  margin-bottom: 2em;
+}
+
+.update-p {
+  font-family: "Chillax", sans-serif;
+  line-height: 2em;
+}
+
+/*==================Responsive===============*/
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: rgba(13, 35, 13, 0.8);
+    /* user-select: none; */
+  }
+  .nav-links,
+  .nav-links-extra {
+    display: none;
+    /* background-image: url() */
+  }
+}

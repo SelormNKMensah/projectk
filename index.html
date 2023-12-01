@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Get more than 1000 books on BookMate for free!"
+    />
+    <title>BookMate</title>
+    <link rel="shortcut icon" href="/bookmate-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=sharpie@700&f[]=tanker@400&f[]=chillax@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="blur">
+      <nav>
+        <header class="nav-container">
+          <div class="logo">
+            <a class="link-logo" href="/index.html"
+              ><img
+                class="main-logo"
+                src="/Color logo - no background.png"
+                alt="BookMate logo"
+                srcset=""
+            /></a>
+          </div>
+          <div class="navigation">
+            <ul class="nav-links">
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/newupdate.html">What's New?</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#" onclick="toggle()">Contact Us</a></li>
+            </ul>
+          </div>
+          <ul class="nav-links-extra">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">SignUp</a></li>
+          </ul>
+        </header>
+      </nav>
+    </div>
+    <div id="modal">
+      <form action="" id="contactus">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          name="fname"
+          id=""
+          required
+          autofocus
+          autocomplete="name"
+        />
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="" required />
+        <label for="e-mail">Email</label>
+        <input type="email" name="e-mail" id="" required />
+        <label for="phone-number">Phone Number</label>
+        <input type="tel" name="phone-number" id="" />
+        <textarea
+          name="message"
+          id=""
+          cols="30"
+          rows="10"
+          form="contactus"
+          required
+        ></textarea>
+      </form>
+      <a href="" onclick="toggle()">Close</a>
+    </div>
+    <script src="/blur.js"></script>
+  </body>
+</html>
